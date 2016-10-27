@@ -8,11 +8,12 @@
  */
 
 
+
 $Pinyin = new Pinyin();
 
-$aAllInThisDir = scandir("./"); 
-$aAllFilesToBeRename = array();
-$thisFileName =  basename( $_SERVER['PHP_SELF'] );
+$aAllInThisDir = scandir("./"); // 当前目录的所有文件、文件夹和目录
+$aAllFilesToBeRename = array(); // 将要被重命名的文件
+$thisFileName =  basename( $_SERVER['PHP_SELF'] ); // 该脚本文件名
 foreach($aAllInThisDir as $value) 
 {
    if( is_file($value) &&  $value!==$thisFileName )
